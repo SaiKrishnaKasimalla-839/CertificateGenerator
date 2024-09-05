@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Generator</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <h3 class="heading">Generate Certificate</h3>
+            <form id="certificateForm">
+              <div class="form-row two-columns">
+                <div class="form-group">
+                  <label for="certificateType">Certificate Type</label>
+                  <select id="certificateType" class="form-control" required>
+                    <option value="" disabled selected>Select a Certificate Type</option>
+                    <option value="experience">Experience Certificate</option>
+                    <option value="course">Course Completion Certificate</option>
+                    <option value="internship">Internship Completion Certificate</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="employeeName">Name</label>
+                  <input type="text" id="employeeName" class="form-control" required />
+                </div>
+              </div>
+              <div class="form-row three-columns">
+                <div class="form-group">
+                  <label for="organizationName">Organization/Institution Name</label>
+                  <input type="text" id="organizationName" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="duration">Duration</label>
+                  <input type="text" id="duration" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="designation">Designation/Title</label>
+                  <input type="text" id="designation" class="form-control" required />
+                </div>
+              </div>
+              <div class="form-row full-width">
+                <button type="submit" class="btn btn-primary">
+                  Generate Certificate
+                </button>
+              </div>
+            </form>
+
+            <div id="certificateOutput" class="certificate-preview">
+              <h2 id="certificateTitle">Certificate</h2>
+              <div id="certificateContent"></div>
+              <button id="downloadBtn" class="btn btn-primary mt-3">
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
